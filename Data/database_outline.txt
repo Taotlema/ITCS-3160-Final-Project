@@ -1,0 +1,58 @@
+Relational Database Outline
+November 18, 2024
+Ayemhenre Isikhuemhen
+============================
+
+Sources:
+Data provided publically by the United States Census Bureau
+U.S. International Trade in Goods and Services (FT900)
+https://www.census.gov/foreign-trade/Press-Release/current_press_release/index.html
+
+
+Relational databases created using SQL to create tables with primary keys.
+
+Tables
+-------------------------
+
+Balance: Difference between exports and imports
+country, Sept(USD), Aug(USD), Year to Date 2023
+
+Exports: U.S. exports to other countries
+country, Sept(USD), Aug(USD), Year to Date 2023
+
+Imports: U.S. imports from other countries
+country, Sept(USD), Aug(USD), Year to Date 2023
+
+Europe: Countries within Europe, and 2024 trade data
+country, 2024_balance(USD), 2024_exports(USD), 2024_imports(USD)
+
+Pacific Rim: Countries within the Pacific Rim, and 2024 trade data
+country, 2024_balance(USD), 2024_exports(USD), 2024_imports(USD)
+
+**country will act as the primary key in the database
+
+Countries Used as Records in the Database
+--------------------------------------------
+> Austria
+> Belgium
+> Czech Republic
+> Finland
+> France
+> Germany
+> Hungary
+> Ireland
+> Italy
+> Netherlands
+> Poland
+> Australia
+> China
+> Hong Kong
+> Indonesia
+> Japan
+> Korea, South
+> Malaysia
+> Philippines
+> Singapore
+> Taiwan
+
+**These countries were selected to meet the project requirements.
