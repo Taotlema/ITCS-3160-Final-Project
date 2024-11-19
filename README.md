@@ -32,8 +32,8 @@ Contacts: aisikhue@charlotte.edu | github.com/Taotlema
 Contacts: aweyandt@charlotte.edu | github.com/aweyandt
 
 ### Faith Madukwe
-**Computer Science Student** at University of North Carolina at Charlotte | Class of **edit**<br>
-Contacts: fmadukwe@charlotte.edu | **edit**
+**Computer Science Student** at University of North Carolina at Charlotte | Class of 2026<br>
+Contacts: fmadukwe@charlotte.edu | github.com/faith-i-m
 
 ### Padhmasri Baskaran
 **Computer Science Student** at University of North Carolina at Charlotte | Class of **edit**<br>
