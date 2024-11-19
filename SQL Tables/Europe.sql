@@ -6,4 +6,6 @@ Author(s): Ayemhenre Isikhuemhen
 
 -- create table
 
+Something
+
 -- load records
