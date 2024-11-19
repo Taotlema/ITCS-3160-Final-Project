@@ -2,20 +2,25 @@
  This project is a collaborative final assignment for the ITCS 3160: Database Design and Implementation course at UNC Charlotte.
 
 ## About the Project
-The goal of the assignment was for us to create a relational database using SQL Queries. To do so our group used data provided by the U.S. Census Bereau.
+The goal of the assignment was for us to create a relational database using SQL Queries. To do so our group used U.S. International Goods and Services trada data provided by the U.S. Census Bereau. Which we can leverage to create a database and queries that can provide insighs in trade dynamics the United States has with 10 countries from the European and Pacific Rim Regions. 
 
 ## Table of Contents
-- [TechStack](#techstack)
-- [Usage](#usage)
-- [Credits](#credits)
+- [Credits and Technology Stack](#credits_and_technology_stack)
 - [Contributors](#contributors)
 - [License](#license)
 
-## TechStack
+## Credits and Technology Stack
+**Development Software**
+- ${\textsf{\color{green}GitHub}}$
+- ${\textsf{\color{green}Oracle SQL}}$
+- ${\textsf{\color{green}Google Drive}}$
+- ${\textsf{\color{green}Lucid Chart}}$
+- ${\textsf{\color{green}Microsoft Excel}}$
+- ${\textsf{\color{green}VsCode (Data Workspace v0.5.0)}}$
 
-## Usage
-
-## Credits
+**Data**
+- ${\textsf{\color{purple}U.S Census Bereau: U.S. International Trade in Goods and Services (FT900)}}$ <br>
+https://www.census.gov/foreign-trade/Press-Release/current_press_release/index.html
 
 ## Contributors
 ### Ayemhenre Isikhuemhen
