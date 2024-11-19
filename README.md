@@ -28,7 +28,7 @@ https://www.census.gov/foreign-trade/Press-Release/current_press_release/index.h
 Contacts: aisikhue@charlotte.edu | github.com/Taotlema
 
 ### Aidan Weyandt
-**Computer Science Student** at University of North Carolina at Charlotte | Class of **2026**<br>
+**Computer Science Student** at University of North Carolina at Charlotte | Class of 2026<br>
 Contacts: aweyandt@charlotte.edu | github.com/aweyandt
 
 ### Faith Madukwe
