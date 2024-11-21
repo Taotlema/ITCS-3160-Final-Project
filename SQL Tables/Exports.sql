@@ -6,4 +6,6 @@ Author(s): Ayemhenre Isikhuemhen, Nathalie Brown
 
 -- create table
 
+create 
+
 -- load records
