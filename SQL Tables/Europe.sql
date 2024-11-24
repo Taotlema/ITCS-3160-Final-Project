@@ -6,7 +6,7 @@ Author(s): Ayemhenre Isikhuemhen
 
 -- create table
 Create Table Europe(
-    Country VARCHAR(20),
+    Country VARCHAR(20) Primary Key,
     Bal_24  Int,
     Exp_24 Int,
     Imp_24 Int

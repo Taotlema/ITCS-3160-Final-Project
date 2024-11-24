@@ -6,10 +6,10 @@ Author(s): Ayemhenre Isikhuemhen,  Aidan Weyandt
 
 -- create table
 Create table Pacific_Rim(
-    country char(30),
-    balance_24 int,
-    import_24 int,
-    export_24 int
+    country Varchar(30) Primary Key,
+    bal_24 int,
+    imp_24 int,
+    exp_24 int
 );
 
 INSERT INTO Pacific_Rim VALUES ('Australia', 14752, 11390, 26141);
