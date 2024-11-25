@@ -38,6 +38,7 @@ Author: Aidan Weyandt
 Descirption: Output the top 10 lowest exports of the U.S, while also showing the average export value.
 */
 
+
 /*
 Query 3:
 Author: Faith Madukwe
