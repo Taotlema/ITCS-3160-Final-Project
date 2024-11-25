@@ -1,10 +1,18 @@
 /*
 Query 1:
 Author: Ayemhenre Isikhuemhen
-Descirption: Output the top 10 highest exports of the U.S by Year to Date metric.
+Descirption: Output the top 10 highest export destinations of the U.S by Year to Date metric.
 */
 Select* From Exports
 Order by YTD_23 desc;
+
+/*
+Query (Did it for fun):
+Author: Ayemhenre Isikhuemhen
+Descirption: Output the top 10 lowest export destinations of the U.S by Year to Date metric.
+*/
+Select* From Exports
+Order by YTD_23 Asc;
 
 /*
 Query (Did it for fun):
@@ -35,7 +43,7 @@ Select * From Trade_Origin;
 /*
 Query 2:
 Author: Aidan Weyandt
-Descirption: Output the top 10 lowest exports of the U.S, while also showing the average export value.
+Descirption:
 */
 
 /*

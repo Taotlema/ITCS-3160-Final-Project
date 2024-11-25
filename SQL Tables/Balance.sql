@@ -6,14 +6,14 @@ Author(s): Ayemhenre Isikhuemhen, Faith Madukwe
 
 -- create table
 
--- load records
-
 CREATE TABLE BALANCE (
     country VARCHAR(20) PRIMARY KEY,
     SEP_23 INT,
     AUG_23 INT,
     YtD_23 INT
 );
+
+-- load records
 
 -- Balance insert statements for selected countries
 INSERT INTO BALANCE VALUES ('Austria', -929, -1127, -10350);
