@@ -76,7 +76,7 @@ Descirption:
 /*
 Join Query 2:
 Author: Nathalie Brown
-Descirption: Compare 2023 and 2024 balances of one particular country.
+Descirption: Compare 2 countries balance, export, and import in 2024.
 */
 SELECT
     e.Country AS Europe_Country,
