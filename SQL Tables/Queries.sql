@@ -1,7 +1,7 @@
 /*
 Query 1:
 Author: Ayemhenre Isikhuemhen
-Descirption: Output the top 10 highest export destinations of the U.S by Year to Date metric.
+Description: Output the top 10 highest export destinations of the U.S by Year to Date metric.
 */
 Select* From Exports
 Order by YTD_23 desc;
@@ -9,7 +9,7 @@ Order by YTD_23 desc;
 /*
 Query (Did it for fun):
 Author: Ayemhenre Isikhuemhen
-Descirption: Output the top 10 lowest export destinations of the U.S by Year to Date metric.
+Description: Output the top 10 lowest export destinations of the U.S by Year to Date metric.
 */
 Select* From Exports
 Order by YTD_23 Asc;
@@ -17,7 +17,7 @@ Order by YTD_23 Asc;
 /*
 Query (Did it for fun):
 Author: Ayemhenre Isikhuemhen
-Descirption: List Countires whose U.S. exports did not decrease between August and September.
+Description: List Countires whose U.S. exports did not decrease between August and September.
 */
 Select country, SEP_23, AUG_23
 FROM Exports
@@ -26,7 +26,7 @@ Where SEP_23 > AUG_23;
 /*
 Query (Did it for fun):
 Author: Ayemhenre Isikhuemhen
-Descirption: List every country from Europe from Balance Table
+Description: List every country from Europe from Balance Table
 */
 Create Table Trade_Origin AS
 Select Country, 'Europe' AS Region
@@ -43,26 +43,26 @@ Select * From Trade_Origin;
 /*
 Query 2:
 Author: Aidan Weyandt
-Descirption: Compare End of Year balance between 23 AND 24
+Description: Compare End of Year balance between 23 AND 24
 */
 
 
 /*
 Query 3:
 Author: Faith Madukwe
-Descirption: Output the top 10 lowest imports of the U.S, while also showing the median import value.
+Description: Output the top 10 lowest imports of the U.S, while also showing the median import value.
 */
 
 /*
 Query 4:
 Author: Padhmasri Baskaran
-Descirption: Output the top 10 hightest imports of the U.S, while also showing the avarage import value.
+Description: Output the top 10 hightest imports of the U.S, while also showing the avarage import value.
 */
 
 /*
 Query 5:
 Author: Nathalie Brown
-Descirption: Output the top 10 highest and lowest balances
+Description: Output the top 10 highest and lowest balances
 */
 select * from Exports order by YTD_23 desc;
 
@@ -70,13 +70,13 @@ select * from Exports order by YTD_23 desc;
 /*
 Join Query 1:
 Author: Padhmasri Baskaran
-Descirption:
+Description:
 */
 
 /*
 Join Query 2:
 Author: Nathalie Brown
-Descirption: Compare 2023 and 2024 balances of one particular country.
+Description: Compare 2023 and 2024 balances of one particular country.
 */
 SELECT
     e.Country AS Europe_Country,
@@ -97,5 +97,5 @@ ON
 /*
 Join Query 3:
 Author: Aidan Weyandt
-Descirption:
+Description:
 */
