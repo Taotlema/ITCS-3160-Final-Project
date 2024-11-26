@@ -64,6 +64,7 @@ Query 5:
 Author: Nathalie Brown
 Descirption: Output the top 10 highest and lowest balances
 */
+select * from Exports order by YTD_23 desc;
 
 
 /*
@@ -77,6 +78,21 @@ Join Query 2:
 Author: Nathalie Brown
 Descirption: Compare 2023 and 2024 balances of one particular country.
 */
+SELECT
+    e.Country AS Europe_Country,
+    e.Bal_24 AS Europe_Balance,
+    e.Exp_24 AS Europe_Export,
+    e.Imp_24 AS Europe_Import,
+    p.country AS Pacific_Rim_Country,
+    p.balance_24 AS Pacific_Rim_Balance,
+    p.export_24 AS Pacific_Rim_Export,
+    p.import_24 AS Pacific_Rim_Import
+FROM
+    Europe e
+JOIN
+    Pacific_Rim p
+ON
+    e.Country = 'Germany' AND p.country = 'China';
 
 /*
 Join Query 3:
