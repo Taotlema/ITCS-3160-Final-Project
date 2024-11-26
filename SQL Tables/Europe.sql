@@ -5,7 +5,7 @@ Author(s): Ayemhenre Isikhuemhen
 */
 
 -- create table
-Create Table Europe(
+Create Table Europe_24(
     Country VARCHAR(20) Primary Key,
     Bal_24  Int,
     Exp_24 Int,

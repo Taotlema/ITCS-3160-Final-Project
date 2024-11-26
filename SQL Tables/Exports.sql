@@ -6,7 +6,7 @@ Author(s): Ayemhenre Isikhuemhen, Nathalie Brown
 
 -- create table
 
-CREATE TABLE EXPORTS (
+CREATE TABLE EXPORTS_23 (
     country VARCHAR(20) PRIMARY KEY,
     SEP_23 INT,
     AUG_23 INT,

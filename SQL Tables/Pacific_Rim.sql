@@ -5,7 +5,7 @@ Author(s): Aidan Weyandt
 */
 
 -- create table
-Create table Pacific_Rim(
+Create table Pacific_Rim_24(
     country Varchar(30) Primary Key,
     bal_24 int,
     imp_24 int,

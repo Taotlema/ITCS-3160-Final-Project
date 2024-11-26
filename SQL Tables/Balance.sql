@@ -6,7 +6,7 @@ Author(s): Ayemhenre Isikhuemhen, Faith Madukwe
 
 -- create table
 
-CREATE TABLE BALANCE (
+CREATE TABLE BALANCE_23 (
     country VARCHAR(20) PRIMARY KEY,
     SEP_23 INT,
     AUG_23 INT,
