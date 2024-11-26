@@ -43,7 +43,7 @@ Select * From Trade_Origin;
 /*
 Query 2:
 Author: Aidan Weyandt
-Descirption:
+Descirption: Compare End of Year balance between 23 AND 24
 */
 
 
