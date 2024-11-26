@@ -76,7 +76,7 @@ Description:
 /*
 Join Query 2:
 Author: Nathalie Brown
-Description: Compare 2023 and 2024 balances of one particular country.
+Descirption: Compare 2023 and 2024 balances of one particular country.
 */
 SELECT
     e.Country AS Europe_Country,
