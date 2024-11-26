@@ -40,7 +40,7 @@ Contacts: fmadukwe@charlotte.edu | github.com/faith-i-m
 Contacts: pbaskara@charlotte.edu | **edit**
 
 ### Nathalie Brown
-**Computer Science Student** at University of North Carolina at Charlotte | Class of **edit**<br>
+**Computer Science Student** at University of North Carolina at Charlotte | Class of 2026<br>
 Contacts: nbrown92@charlotte.edu | github.com/nbrown305
 
 ## License
