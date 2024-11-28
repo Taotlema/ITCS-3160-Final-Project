@@ -104,24 +104,48 @@ ON
 /*
 Join Query 3:
 Author: Aidan Weyandt
-Description: Compare highest and lowest balance of all countires located within Pacific Rimbetween 2023 and 2024
+Description: Compare highest and lowest balance of all countires located within Pacific Rim between 2023 and 2024
 */
 
-Select 
-    (SELECT MAX(BAL_23) FROM Pacific_Rim_23) AS Min_Balance_23, 
-    (SELECT MIN(BAL_23) FROM Pacific_Rim_23) AS Max_Balance_23, 
-    (Select MAX(BAL_24) FROM Pacific_Rim_24) AS Min_Balance_24,
-    (SELECT MIN(BAL_24) FROM Pacific_Rim_24) AS Max_Balance_24
-
+SELECT 
+    -- Max and Min Balances for 2023
+    (SELECT country 
+     FROM Pacific_Rim_23 
+     WHERE YtD_23 = (SELECT MAX(YtD_23) FROM Pacific_Rim_23)) AS Country_Max_Balance_23,
+    (SELECT MAX(YtD_23) FROM Pacific_Rim_23) AS Max_Balance_23,
+    
+    (SELECT country 
+     FROM Pacific_Rim_23 
+     WHERE YtD_23 = (SELECT MIN(YtD_23) FROM Pacific_Rim_23)) AS Country_Min_Balance_23,
+    (SELECT MIN(YtD_23) FROM Pacific_Rim_23) AS Min_Balance_23,
+    
+    -- Max and Min Balances for 2024
+    (SELECT country 
+     FROM Pacific_Rim_24 
+     WHERE bal_24 = (SELECT MAX(bal_24) FROM Pacific_Rim_24)) AS Country_Max_Balance_24,
+    (SELECT MAX(bal_24) FROM Pacific_Rim_24) AS Max_Balance_24,
+    
+    (SELECT country 
+     FROM Pacific_Rim_24 
+     WHERE bal_24 = (SELECT MIN(bal_24) FROM Pacific_Rim_24)) AS Country_Min_Balance_24,
+    (SELECT MIN(bal_24) FROM Pacific_Rim_24) AS Min_Balance_24,
+    
+    -- Comparison Statements
     CASE
-     WHEN (SELECT MAX(BAL_24) FROM Pacific_Rim_24) < (SELECT MAX(BAL_23) FROM Pacific_Rim_23) THEN 'Pacific_Rim_2024 has a higher Balance'
-     ELSE 'Pacific_Rim_2023 has a higher Balance'
-     End as Max_comparison
-
+        WHEN (SELECT MAX(bal_24) FROM Pacific_Rim_24) > 
+             (SELECT MAX(YtD_23) FROM Pacific_Rim_23) 
+        THEN 'Pacific_Rim_2024 has a higher Balance'
+        ELSE 'Pacific_Rim_2023 has a higher Balance'
+    END AS Max_comparison,
+    
     CASE
-     WHEN (SELECT MIN(BAL_24) FROM Pacific_Rim_24) < (SELECT MIN(BAL_23) FROM Pacific_Rim_23) Then 'Pacific_Rim_2024 has a lower Balance'
-     ELSE 'Pacific_Rim_2023 has a lower Balance'
-     END as Min_comparison;
+        WHEN (SELECT MIN(bal_24) FROM Pacific_Rim_24) < 
+             (SELECT MIN(YtD_23) FROM Pacific_Rim_23) 
+        THEN 'Pacific_Rim_2024 has a lower Balance'
+        ELSE 'Pacific_Rim_2023 has a lower Balance'
+    END AS Min_comparison
+FROM DUAL;
+
      
 
 
