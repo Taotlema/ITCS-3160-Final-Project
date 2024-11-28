@@ -58,6 +58,11 @@ Query 4:
 Author: Padhmasri Baskaran
 Description: Output the top 10 hightest imports of the U.S, while also showing the avarage import value.
 */
+select im.country, im.ytd_23, ag.avg_23
+from IMPORTS_23 im,
+    (select round(avg(YTD_23), 2) as avg_23 from IMPORTS_23) ag
+order by im.YTD_23 desc
+FETCH first 10 rows only;
 
 /*
 Query 5:
