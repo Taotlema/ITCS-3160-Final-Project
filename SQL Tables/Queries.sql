@@ -43,8 +43,15 @@ Select * From Trade_Origin;
 /*
 Query 2:
 Author: Aidan Weyandt
-Description: Compare End of Year balance between 23 AND 24
+Description: Compare Highest and Lowest balance in 2024 in Pacific Rim, then display the two in descending order
 */
+
+SELECT * 
+FROM Pacific_Rim_24 
+WHERE bal_24 = (SELECT MAX(bal_24) FROM Pacific_Rim_24)
+   OR bal_24 = (SELECT MIN(bal_24) FROM Pacific_Rim_24)
+ORDER BY bal_24 DESC;
+
 
 
 /*
@@ -62,7 +69,7 @@ Description: Output the top 10 hightest imports of the U.S, while also showing t
 /*
 Query 5:
 Author: Nathalie Brown
-Description: Output the top 10 highest and lowest balances
+Description: Output the descending order
 */
 select * from Exports order by YTD_23 desc;
 
@@ -97,5 +104,5 @@ ON
 /*
 Join Query 3:
 Author: Aidan Weyandt
-Description:
+Description: Compare end of yea between 
 */
