@@ -82,8 +82,12 @@ select * from Exports order by YTD_23 desc;
 /*
 Join Query 1:
 Author: Padhmasri Baskaran
-Description:
+Description: Output the countries to which U.S exports atleast as much as it imports
 */
+SELECT ex.country, ex.YTD_23 as "YTD Export 23", im.YTD_23 as "YTD Import 23"
+FROM Exports_23 ex
+INNER JOIN Imports_23 im
+ON ex.country = im.country and ex.YTD_23 >= im.YTD_23;
 
 /*
 Join Query 2:
