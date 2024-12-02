@@ -5,7 +5,6 @@ Author(s): Ayemhenre Isikhuemhen, Faith Madukwe
 */
 
 -- create table
-
 CREATE TABLE Balance_23 (
     rec_id INT PRIMARY KEY,
     country VARCHAR(20),
@@ -14,8 +13,6 @@ CREATE TABLE Balance_23 (
     YtD_23 INT,
     CONSTRAINT fk_country_balance FOREIGN KEY (country) REFERENCES Country_Index(country)
 );
-
--- load records
 
 -- Balance insert statements for selected countries
 INSERT INTO Balance_23  VALUES (7000, 'Austria', -929, -1127, -10350);
@@ -39,3 +36,6 @@ INSERT INTO Balance_23  VALUES (7017, 'Malaysia', -2087, -1890, -20888);
 INSERT INTO Balance_23  VALUES (7018, 'Philiphines', -364, -295, -3167);
 INSERT INTO Balance_23  VALUES (7019, 'Singapore', 864, -651, -280);
 INSERT INTO Balance_23  VALUES (7020, 'Taiwan', -5128, -4725, -34821);
+
+
+/* select * from BALANCE_23; */

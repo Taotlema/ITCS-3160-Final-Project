@@ -59,6 +59,13 @@ Query 3:
 Author: Faith Madukwe
 Description: Output the top 10 lowest imports of the U.S, while also showing the median import value.
 */
+SELECT im.Country, im.YTD_23 AS Import_Value, med.Median_Import FROM IMPORTS_23 im,
+    (SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY YTD_23) AS Median_Import FROM IMPORTS_23) med
+ORDER BY 
+    im.YTD_23 ASC
+FETCH FIRST 10 ROWS ONLY;
+
+/* 'PERCENTILE_CONT(0.5)' to calculate the median of YTD_23 */
 
 /*
 Query 4:
