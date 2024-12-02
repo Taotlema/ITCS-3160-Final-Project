@@ -113,20 +113,20 @@ ON
 /*
 Join Query 3:
 Author: Aidan Weyandt
-Description: Compare highest and lowest balance of all countires located within Pacific Rim between 2023 and 2024
+Description: Compare highest and lowest balance of all countries within selected list using two seperate tables
 */
 
 SELECT 
     -- Max and Min Balances for 2023
     (SELECT country 
-     FROM Pacific_Rim_23 
-     WHERE YtD_23 = (SELECT MAX(YtD_23) FROM Pacific_Rim_23)) AS Country_Max_Balance_23,
-    (SELECT MAX(YtD_23) FROM Pacific_Rim_23) AS Max_Balance_23,
+     FROM Balance_23 
+     WHERE YtD_23 = (SELECT MAX(YtD_23) FROM Balance_23)) AS Country_Max_Balance_23,
+    (SELECT MAX(YtD_23) FROM Balance_23) AS Max_Balance_23,
     
     (SELECT country 
-     FROM Pacific_Rim_23 
-     WHERE YtD_23 = (SELECT MIN(YtD_23) FROM Pacific_Rim_23)) AS Country_Min_Balance_23,
-    (SELECT MIN(YtD_23) FROM Pacific_Rim_23) AS Min_Balance_23,
+     FROM Balance_23 
+     WHERE YtD_23 = (SELECT MIN(YtD_23) FROM Balance_23)) AS Country_Min_Balance_23,
+    (SELECT MIN(YtD_23) FROM Balance_23) AS Min_Balance_23,
     
     -- Max and Min Balances for 2024
     (SELECT country 
@@ -142,14 +142,14 @@ SELECT
     -- Comparison Statements
     CASE
         WHEN (SELECT MAX(bal_24) FROM Pacific_Rim_24) > 
-             (SELECT MAX(YtD_23) FROM Pacific_Rim_23) 
+             (SELECT MAX(YtD_23) FROM Balance_23) 
         THEN 'Pacific_Rim_2024 has a higher Balance'
         ELSE 'Pacific_Rim_2023 has a higher Balance'
     END AS Max_comparison,
     
     CASE
         WHEN (SELECT MIN(bal_24) FROM Pacific_Rim_24) < 
-             (SELECT MIN(YtD_23) FROM Pacific_Rim_23) 
+             (SELECT MIN(YtD_23) FROM Balance_23) 
         THEN 'Pacific_Rim_2024 has a lower Balance'
         ELSE 'Pacific_Rim_2023 has a lower Balance'
     END AS Min_comparison
