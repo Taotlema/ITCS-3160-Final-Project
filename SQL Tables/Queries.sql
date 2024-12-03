@@ -31,11 +31,11 @@ Description: List every country from Europe from Balance Table
 
 Create Table Trade_Origin AS
 Select Country, 'Europe' AS Region
-From Europe
+From Europe_24
 Where Country IN (Select Country From Balance)
 Union all
 Select Country, 'Pacific_Rim' AS Region
-From Pacific_Rim
+From Pacific_Rim_24
 Where Country in (Select Country From Balance);
 
 Select * From Trade_Origin;
