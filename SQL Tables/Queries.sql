@@ -83,7 +83,7 @@ Query 5:
 Author: Nathalie Brown
 Description: Output the descending order
 */
-select * from Exports order by YTD_23 desc;
+select * from Exports_23 order by YTD_23 desc;
 
 
 /*
