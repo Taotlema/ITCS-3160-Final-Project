@@ -32,3 +32,4 @@ INSERT INTO Country_Index  VALUES (0017, 'Malaysia');
 INSERT INTO Country_Index  VALUES (0018, 'Philippines');
 INSERT INTO Country_Index  VALUES (0019, 'Singapore');
 INSERT INTO Country_Index  VALUES (0020, 'Taiwan');
+INSERT INTO Country_Index  VALUES (0021, 'Other Countries');
