@@ -22,7 +22,7 @@ Description: List Countires whose U.S. exports did not decrease between August a
 Select country, SEP_23, AUG_23
 FROM Exports_23
 Where SEP_23 > AUG_23;
-cx
+
 /*
 Query (Did it for fun):
 Author: Ayemhenre Isikhuemhen
@@ -75,7 +75,7 @@ Author: Padhmasri Baskaran
 Description: Output the top 10 highest imports of the U.S., while also showing the average import value.
 */
 
-select im.country, im.ytd_23, ag.avg_23
+select im.country, im.YTD_23, ag.avg_23
 from IMPORTS_23 im,
     (select round(avg(YTD_23), 2) as avg_23 from IMPORTS_23) ag
 order by im.YTD_23 desc
@@ -127,13 +127,13 @@ SELECT
     -- Max and Min Balances for 2023
     (SELECT country 
      FROM Balance_23 
-     WHERE YtD_23 = (SELECT MAX(YtD_23) FROM Balance_23)) AS Country_Max_Balance_23,
-    (SELECT MAX(YtD_23) FROM Balance_23) AS Max_Balance_23,
+     WHERE YTD_23 = (SELECT MAX(YTD_23) FROM Balance_23)) AS Country_Max_Balance_23,
+    (SELECT MAX(YTD_23) FROM Balance_23) AS Max_Balance_23,
     
     (SELECT country 
      FROM Balance_23 
-     WHERE YtD_23 = (SELECT MIN(YtD_23) FROM Balance_23)) AS Country_Min_Balance_23,
-    (SELECT MIN(YtD_23) FROM Balance_23) AS Min_Balance_23,
+     WHERE YTD_23 = (SELECT MIN(YTD_23) FROM Balance_23)) AS Country_Min_Balance_23,
+    (SELECT MIN(YTD_23) FROM Balance_23) AS Min_Balance_23,
     
     -- Max and Min Balances for 2024
     (SELECT country 
@@ -149,14 +149,14 @@ SELECT
     -- Comparison Statements 
     CASE
         WHEN (SELECT MAX(bal_24) FROM Pacific_Rim_24) > 
-             (SELECT MAX(YtD_23) FROM Balance_23) 
+             (SELECT MAX(YTD_23) FROM Balance_23) 
         THEN 'Pacific_Rim_2024 has a higher Balance'
         ELSE 'Balance_23 has a higher Balance'
     END AS Max_Comparison,
     
     CASE
         WHEN (SELECT MIN(bal_24) FROM Pacific_Rim_24) < 
-             (SELECT MIN(YtD_23) FROM Balance_23) 
+             (SELECT MIN(YTD_23) FROM Balance_23) 
         THEN 'Pacific_Rim_2024 has a lower Balance'
         ELSE 'Balance_23 has a lower Balance'
     END AS Min_Comparison

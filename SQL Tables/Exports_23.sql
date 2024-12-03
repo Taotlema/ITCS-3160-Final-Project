@@ -11,7 +11,7 @@ CREATE TABLE EXPORTS_23 (
     country VARCHAR(20),
     SEP_23 INT,
     AUG_23 INT,
-    YtD_23 INT,
+    YTD_23 INT,
     CONSTRAINT fk_country_export FOREIGN KEY (country) REFERENCES Country_Index(country));
 
 

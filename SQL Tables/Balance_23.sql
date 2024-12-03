@@ -10,7 +10,7 @@ CREATE TABLE Balance_23 (
     country VARCHAR(20),
     SEP_23 INT,
     AUG_23 INT,
-    YtD_23 INT,
+    YTD_23 INT,
     CONSTRAINT fk_country_balance FOREIGN KEY (country) REFERENCES Country_Index(country)
 );
 
@@ -26,16 +26,13 @@ INSERT INTO Balance_23  VALUES (7007, 'Ireland', -6208, -5748, -49812);
 INSERT INTO Balance_23  VALUES (7008, 'Italy', -1874, -3994, -32818);
 INSERT INTO Balance_23  VALUES (7009, 'Netherlands', 3215, 3252, 31843);
 INSERT INTO Balance_23  VALUES (7010, 'Poland', -34, -206, -1670);
-INSERT INTO Balance_23  VALUES (7011, 'Austrailia', 1639, 1584, 12886);
+INSERT INTO Balance_23  VALUES (7011, 'Australia', 1639, 1584, 12886);
 INSERT INTO Balance_23  VALUES (7012, 'China', -28444, -25941, -209758);
 INSERT INTO Balance_23  VALUES (7013, 'Hong Kong', 3141, 1954, 18068);
 INSERT INTO Balance_23  VALUES (7014, 'Indonesia', -1582, -1426, -13297);
 INSERT INTO Balance_23  VALUES (7015, 'Japan', -6101, -5685, -52042);
-INSERT INTO Balance_23  VALUES (7016, 'Korea, South', -4206, -4328, -38701);
+INSERT INTO Balance_23  VALUES (7016, 'South Korea', -4206, -4328, -38701);
 INSERT INTO Balance_23  VALUES (7017, 'Malaysia', -2087, -1890, -20888);
-INSERT INTO Balance_23  VALUES (7018, 'Philiphines', -364, -295, -3167);
+INSERT INTO Balance_23  VALUES (7018, 'Philippines', -364, -295, -3167);
 INSERT INTO Balance_23  VALUES (7019, 'Singapore', 864, -651, -280);
 INSERT INTO Balance_23  VALUES (7020, 'Taiwan', -5128, -4725, -34821);
-
-
-/* select * from BALANCE_23; */
