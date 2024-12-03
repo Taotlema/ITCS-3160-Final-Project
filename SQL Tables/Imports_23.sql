@@ -1,7 +1,7 @@
 /*
 ITCS-3169-Final-Project
 November 19, 2024
-Author(s): Ayemhenre Isikhuemhen, Padhmasri Baskaran
+Author(s): Ayemhenre Isikhuemhen, Padhmasri Baskaran, Aidan Weyandt
 */
 
 -- create table
@@ -11,7 +11,7 @@ CREATE TABLE IMPORTS_23 (
     country VARCHAR(20),
     SEP_23 INT,
     AUG_23 INT,
-    YtD_23 INT,
+    YTD_23 INT,
     CONSTRAINT fk_country_import FOREIGN KEY (country) REFERENCES Country_Index(country)
 );
 
