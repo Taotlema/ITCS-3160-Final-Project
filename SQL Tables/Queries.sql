@@ -28,6 +28,7 @@ Query (Did it for fun):
 Author: Ayemhenre Isikhuemhen
 Description: List every country from Europe from Balance Table
 */
+
 Create Table Trade_Origin AS
 Select Country, 'Europe' AS Region
 From Europe
@@ -59,6 +60,7 @@ Query 3:
 Author: Faith Madukwe
 Description: Output the top 10 lowest imports of the U.S, while also showing the median import value.
 */
+
 SELECT im.Country, im.YTD_23 AS Import_Value, med.Median_Import FROM IMPORTS_23 im,
     (SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY YTD_23) AS Median_Import FROM IMPORTS_23) med
 ORDER BY 
@@ -70,8 +72,9 @@ FETCH FIRST 10 ROWS ONLY;
 /*
 Query 4:
 Author: Padhmasri Baskaran
-Description: Output the top 10 hightest imports of the U.S, while also showing the avarage import value.
+Description: Output the top 10 highest imports of the U.S., while also showing the average import value.
 */
+
 select im.country, im.ytd_23, ag.avg_23
 from IMPORTS_23 im,
     (select round(avg(YTD_23), 2) as avg_23 from IMPORTS_23) ag
