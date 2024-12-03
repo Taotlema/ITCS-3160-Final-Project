@@ -24,7 +24,7 @@ FROM Exports_23
 Where SEP_23 > AUG_23;
 
 /*
-Query (Did it for fun):
+Query 1:
 Author: Ayemhenre Isikhuemhen
 Description: List every country from Europe from Balance Table
 */
@@ -51,7 +51,7 @@ SELECT *
 FROM Pacific_Rim_24 
 WHERE bal_24 = (SELECT MAX(bal_24) FROM Pacific_Rim_24)
    OR bal_24 = (SELECT MIN(bal_24) FROM Pacific_Rim_24)
-ORDER BY bal_24 DESC;A
+ORDER BY bal_24 DESC;
 
 /*
 Query 3:
