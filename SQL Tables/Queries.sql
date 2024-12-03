@@ -3,7 +3,7 @@ Query 1:
 Author: Ayemhenre Isikhuemhen
 Description: Output the top 10 highest export destinations of the U.S by Year to Date metric.
 */
-Select* From Exports
+Select * From Exports_23
 Order by YTD_23 desc;
 
 /*
@@ -11,7 +11,7 @@ Query (Did it for fun):
 Author: Ayemhenre Isikhuemhen
 Description: Output the top 10 lowest export destinations of the U.S by Year to Date metric.
 */
-Select* From Exports
+Select* From Exports_23
 Order by YTD_23 Asc;
 
 /*
@@ -20,9 +20,9 @@ Author: Ayemhenre Isikhuemhen
 Description: List Countires whose U.S. exports did not decrease between August and September.
 */
 Select country, SEP_23, AUG_23
-FROM Exports
+FROM Exports_23
 Where SEP_23 > AUG_23;
-
+cx
 /*
 Query (Did it for fun):
 Author: Ayemhenre Isikhuemhen
