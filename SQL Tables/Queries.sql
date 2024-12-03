@@ -99,23 +99,20 @@ ON ex.country = im.country and ex.YTD_23 >= im.YTD_23;
 /*
 Join Query 2:
 Author: Nathalie Brown
-Descirption: Compare 2023 and 2024 balances of one particular country.
+Description: Compare balances, exports, and imports of 2 selected countries.
 */
-SELECT
-    e.Country AS Europe_Country,
-    e.Bal_24 AS Europe_Balance,
-    e.Exp_24 AS Europe_Export,
-    e.Imp_24 AS Europe_Import,
-    p.country AS Pacific_Rim_Country,
-    p.balance_24 AS Pacific_Rim_Balance,
-    p.export_24 AS Pacific_Rim_Export,
-    p.import_24 AS Pacific_Rim_Import
-FROM
-    Europe e
-JOIN
-    Pacific_Rim p
-ON
-    e.Country = 'Germany' AND p.country = 'China';
+SELECT 
+    e.country AS Europe_Country, 
+    e.Bal_24 AS Europe_Balance, 
+    e.Exp_24 AS Europe_Export, 
+    e.Imp_24 AS Europe_Import, 
+    p.country AS Pacific_Rim_Country, 
+    p.Bal_24 AS Pacific_Rim_Balance, 
+    p.Exp_24 AS Pacific_Rim_Export, 
+    p.Imp_24 AS Pacific_Rim_Import 
+    FROM Europe_24 e 
+    JOIN Pacific_Rim_24 p 
+    ON e.country = 'Hungary' AND p.country = 'China';
 
 /*
 Join Query 3:
