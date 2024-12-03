@@ -31,11 +31,11 @@ Description: List every country from Europe from Balance Table
 
 Create Table Trade_Origin AS
 Select Country, 'Europe' AS Region
-From Europe_24
+From Europe
 Where Country IN (Select Country From Balance)
 Union all
 Select Country, 'Pacific_Rim' AS Region
-From Pacific_Rim_24
+From Pacific_Rim;
 Where Country in (Select Country From Balance);
 
 Select * From Trade_Origin;
@@ -51,9 +51,7 @@ SELECT *
 FROM Pacific_Rim_24 
 WHERE bal_24 = (SELECT MAX(bal_24) FROM Pacific_Rim_24)
    OR bal_24 = (SELECT MIN(bal_24) FROM Pacific_Rim_24)
-ORDER BY bal_24 DESC;
-
-
+ORDER BY bal_24 DESC;A
 
 /*
 Query 3:
@@ -61,11 +59,13 @@ Author: Faith Madukwe
 Description: Output the top 10 lowest imports of the U.S, while also showing the median import value.
 */
 
-SELECT im.Country, im.YTD_23 AS Import_Value, med.Median_Import FROM IMPORTS_23 im,
-    (SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY YTD_23) AS Median_Import FROM IMPORTS_23) med
-ORDER BY 
-    im.YTD_23 ASC
+SELECT im.country, im.ytd_23,  ag.avg_23
+FROM IMPORTS_23 im,
+     (SELECT ROUND(AVG(YTD_23), 2) AS avg_23 
+      FROM IMPORTS_23) ag
+ORDER BY im.YTD_23 DESC
 FETCH FIRST 10 ROWS ONLY;
+
 
 /* 'PERCENTILE_CONT(0.5)' to calculate the median of YTD_23 */
 
